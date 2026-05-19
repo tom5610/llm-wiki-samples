@@ -2,7 +2,7 @@
 title: Wiki Overview
 type: overview
 created: 2026-05-14
-updated: 2026-05-19
+updated: 2026-05-20
 ---
 
 # Wiki Overview
@@ -48,6 +48,16 @@ Two complementary systems keep agents operating within bounds:
 
 - **Guardrails** — Layered automated defenses (relevance classifiers, safety classifiers, PII filters, moderation, tool safeguards, rules-based protections, output validation) that run concurrently with agent execution.
 - **Human Intervention** — Graceful escalation when agents exceed failure thresholds or encounter high-risk actions requiring human judgment.
+
+## Tool Design for Agents
+
+Building effective tools requires rethinking software design for non-deterministic consumers. Key principles:
+
+- **Selection over coverage** — Build a few purposeful tools targeting high-impact workflows rather than wrapping every API endpoint. Consolidate multi-step operations into single tools.
+- **Evaluation-driven improvement** — Prototype → evaluate with realistic tasks → analyze transcripts → iterate with agents. Held-out test sets prevent overfitting. Claude-optimized tools outperform human-written ones by 10-15% on held-out evaluations.
+- **Response design** — Return high-signal, semantically meaningful data. Use `response_format` enums to let agents control verbosity. Implement pagination, filtering, and truncation with helpful refinement instructions.
+- **Namespacing** — Group tools by service and resource. Prefix vs. suffix naming has measurable effects on performance that vary by model.
+- **Descriptions as prompts** — Tool descriptions are loaded into agent context and collectively steer behavior. Prompt-engineer them as you would system prompts.
 
 ## Design Philosophy
 

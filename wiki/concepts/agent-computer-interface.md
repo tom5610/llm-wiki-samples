@@ -3,7 +3,7 @@ title: Agent-Computer Interface (ACI)
 type: concept
 source: "raw/Building Effective AI Agents.md"
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-20
 ---
 
 # Agent-Computer Interface (ACI)
@@ -32,6 +32,15 @@ Practical tool format guidelines:
 
 The quality of the ACI is a force multiplier: a well-designed tool interface makes every workflow pattern and agent more reliable. Conversely, poor ACI design is a common root cause of agent failures that gets misattributed to model limitations.
 
+## Evaluation-Driven Improvement
+
+ACI quality can be systematically measured and improved through [[tool-evaluation|Tool Evaluation]]. Anthropic's internal data shows that iteratively optimizing tools with Claude Code against held-out test sets yields significant gains over both human-written and initial AI-generated implementations:
+
+- Slack MCP server: 67.4% (human-written) → 80.1% (Claude-optimized)
+- Asana MCP server: 79.6% (human-written) → 85.7% (Claude-optimized)
+
+Key levers for ACI improvement include [[tool-selection|Tool Selection]] (choosing which tools to build), [[tool-namespacing|Tool Namespacing]] (naming for disambiguation), and [[tool-response-design|Tool Response Design]] (engineering what tools return). Prompt-engineering tool descriptions — making implicit context explicit, as one would when onboarding a new team member — is among the most effective single interventions. Even small refinements to descriptions yielded dramatic improvements on SWE-bench Verified.
+
 ## Relationships
 
 ACI quality directly impacts the effectiveness of the [[augmented-llm|Augmented LLM]] building block. Every workflow pattern ([[prompt-chaining|Prompt Chaining]], [[routing|Routing]], [[parallelization|Parallelization]], [[orchestrator-workers|Orchestrator-Workers]], [[evaluator-optimizer|Evaluator-Optimizer]]) benefits from well-designed tool interfaces. ACI is one of the three [[agent-design-principles|Agent Design Principles]].
@@ -43,3 +52,8 @@ ACI quality directly impacts the effectiveness of the [[augmented-llm|Augmented 
 - [[agent-design-principles|Agent Design Principles]]
 - [[orchestrator-workers|Orchestrator-Workers]]
 - [[evaluator-optimizer|Evaluator-Optimizer]]
+- [[tool-evaluation|Tool Evaluation]]
+- [[tool-selection|Tool Selection]]
+- [[tool-namespacing|Tool Namespacing]]
+- [[tool-response-design|Tool Response Design]]
+- [[tool-taxonomy|Tool Taxonomy]]
