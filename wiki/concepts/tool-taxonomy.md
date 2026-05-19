@@ -3,7 +3,7 @@ title: Tool Taxonomy
 type: concept
 source: "raw/A practical guide to building agents.md"
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-05-20
 ---
 
 # Tool Taxonomy
@@ -52,6 +52,12 @@ In multi-agent systems, agents can serve as tools for other agents. This is the 
 
 For systems without APIs, agents can rely on computer-use models to interact directly through web and application UIs — just as a human would. This extends the tool concept beyond traditional API integrations to any interactive interface.
 
+## Tool Consolidation
+
+Within each category, effective tools consolidate multi-step workflows rather than wrapping individual API endpoints. The principle of [[tool-selection|Tool Selection]] applies: build fewer, more purposeful tools that match agent affordances. For example, a single `schedule_event` Data+Action tool is more ergonomic than separate `list_users`, `list_events`, and `create_event` tools.
+
+How tools are named ([[tool-namespacing|Tool Namespacing]]) and what they return ([[tool-response-design|Tool Response Design]]) are equally important — these can be systematically optimized through [[tool-evaluation|Tool Evaluation]].
+
 ## Relationships
 
 The tool taxonomy refines the [[augmented-llm|Augmented LLM]] concept by categorizing the "tools" component into distinct functional roles. It connects directly to [[agent-computer-interface|Agent-Computer Interface]] design, which governs how tools are documented and presented to agents. The orchestration category is the mechanism underlying both the [[manager-pattern|Manager Pattern]] and [[decentralized-pattern|Decentralized Pattern]].
@@ -63,3 +69,7 @@ The tool taxonomy refines the [[augmented-llm|Augmented LLM]] concept by categor
 - [[manager-pattern|Manager Pattern]]
 - [[decentralized-pattern|Decentralized Pattern]]
 - [[guardrails|Guardrails]]
+- [[tool-selection|Tool Selection]]
+- [[tool-namespacing|Tool Namespacing]]
+- [[tool-evaluation|Tool Evaluation]]
+- [[tool-response-design|Tool Response Design]]
