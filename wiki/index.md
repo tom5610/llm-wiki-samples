@@ -2,7 +2,7 @@
 title: Wiki Index
 type: index
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-20
 ---
 
 # Wiki Index
@@ -19,6 +19,8 @@ updated: 2026-05-14
 ### Derived
 
 - [[agent-computer-interface|Agent-Computer Interface (ACI)]] — Design principles for tool interfaces that agents interact with
+- [[tool-selection|Tool Selection]] — Choosing which tools to build: affordances, consolidation, deliberate curation over coverage
+- [[tool-namespacing|Tool Namespacing]] — Naming conventions that help agents disambiguate between many tools
 
 ## Techniques
 
@@ -27,6 +29,8 @@ updated: 2026-05-14
 - [[parallelization|Parallelization]] — Simultaneous LLM calls (sectioning or voting) with aggregation
 - [[orchestrator-workers|Orchestrator-Workers]] — Central LLM dynamically delegates to worker LLMs
 - [[evaluator-optimizer|Evaluator-Optimizer]] — Generator/evaluator feedback loop until acceptance
+- [[tool-evaluation|Tool Evaluation]] — Evaluation-driven development loop for measuring and improving agent tool use
+- [[tool-response-design|Tool Response Design]] — Engineering tool responses for token efficiency and agent effectiveness
 
 ## Synthesis & Comparisons
 
