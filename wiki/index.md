@@ -2,7 +2,7 @@
 title: Wiki Index
 type: index
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-19
 ---
 
 # Wiki Index
@@ -19,6 +19,9 @@ updated: 2026-05-14
 ### Derived
 
 - [[agent-computer-interface|Agent-Computer Interface (ACI)]] — Design principles for tool interfaces that agents interact with
+- [[guardrails|Guardrails]] — Layered defense mechanism: classifiers, filters, tool safeguards, and rules-based protections
+- [[human-intervention|Human Intervention]] — When and how to transfer control to human operators
+- [[tool-taxonomy|Tool Taxonomy]] — Three-way tool classification: Data, Action, Orchestration
 
 ## Techniques
 
@@ -27,6 +30,9 @@ updated: 2026-05-14
 - [[parallelization|Parallelization]] — Simultaneous LLM calls (sectioning or voting) with aggregation
 - [[orchestrator-workers|Orchestrator-Workers]] — Central LLM dynamically delegates to worker LLMs
 - [[evaluator-optimizer|Evaluator-Optimizer]] — Generator/evaluator feedback loop until acceptance
+- [[agent-use-case-selection|Agent Use-Case Selection]] — Criteria for evaluating agent suitability: complex decisions, brittle rules, unstructured data
+- [[manager-pattern|Manager Pattern]] — Central agent delegates to specialized agents via tool calls
+- [[decentralized-pattern|Decentralized Pattern]] — Peer agents hand off execution to each other
 
 ## Synthesis & Comparisons
 

@@ -2,7 +2,7 @@
 title: Wiki Overview
 type: overview
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-19
 ---
 
 # Wiki Overview
@@ -31,6 +31,28 @@ Five composable patterns cover the production workflow design space:
 | Orchestrator-Workers | Dynamic delegation | Can't predict subtasks in advance |
 | Evaluator-Optimizer | Generate + critique loop | Clear criteria and iterative refinement adds value |
 
+## Multi-Agent Orchestration
+
+When a single agent isn't enough, two patterns emerge for coordinating multiple agents:
+
+| Pattern | Topology | Control | Best For |
+|---------|----------|---------|----------|
+| Manager | Hub-and-spoke | Central manager delegates via tool calls | Synthesizing multi-specialist outputs |
+| Decentralized | Peer-to-peer | Agents hand off execution to each other | Triage and domain routing |
+
+The choice depends on whether you need centralized synthesis (manager) or clean domain handoffs (decentralized).
+
+## Safety & Reliability
+
+Two complementary systems keep agents operating within bounds:
+
+- **Guardrails** — Layered automated defenses (relevance classifiers, safety classifiers, PII filters, moderation, tool safeguards, rules-based protections, output validation) that run concurrently with agent execution.
+- **Human Intervention** — Graceful escalation when agents exceed failure thresholds or encounter high-risk actions requiring human judgment.
+
 ## Design Philosophy
 
 Three principles guide agent construction: **simplicity** (start minimal, earn complexity), **transparency** (show planning steps), and **careful ACI design** (invest in tool interfaces as much as HCI). The Agent-Computer Interface concept — treating tool design with the same rigor as UI design — is a distinctive contribution of this framework.
+
+## Tool Design
+
+Agents interact with external systems through three categories of tools: **Data** (retrieving context), **Action** (changing state), and **Orchestration** (agents serving as tools for other agents). Well-documented, thoroughly tested, reusable tools with standardized definitions are the foundation of reliable agent behavior.
