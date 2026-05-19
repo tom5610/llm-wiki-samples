@@ -3,7 +3,7 @@ title: Agent Design Principles
 type: synthesis
 source: "raw/Building Effective AI Agents.md"
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-19
 ---
 
 # Agent Design Principles
@@ -70,11 +70,16 @@ Two validated production domains:
 
 ## Guardrails
 
-The autonomous nature of agents means higher costs and potential for compounding errors. Mitigations:
+The autonomous nature of agents means higher costs and potential for compounding errors. [[guardrails|Guardrails]] form a layered defense mechanism — multiple specialized guardrails (relevance classifiers, safety classifiers, PII filters, moderation, tool safeguards, rules-based protections, output validation) run concurrently with agent execution and trigger exceptions when constraints are breached.
+
+Mitigations for autonomous risk:
 - Extensive testing in sandboxed environments
 - Maximum iteration limits (stopping conditions)
-- Human-in-the-loop checkpoints for high-stakes decisions
+- [[human-intervention|Human-in-the-loop]] checkpoints for high-stakes decisions
 - Clear success criteria to know when to stop
+- Tool risk assessment (rating each tool by reversibility, permissions, financial impact)
+
+See [[guardrails|Guardrails]] for a comprehensive taxonomy and implementation approach.
 
 ## See also
 
@@ -84,3 +89,8 @@ The autonomous nature of agents means higher costs and potential for compounding
 - [[prompt-chaining|Prompt Chaining]]
 - [[orchestrator-workers|Orchestrator-Workers]]
 - [[evaluator-optimizer|Evaluator-Optimizer]]
+- [[guardrails|Guardrails]]
+- [[human-intervention|Human Intervention]]
+- [[manager-pattern|Manager Pattern]]
+- [[decentralized-pattern|Decentralized Pattern]]
+- [[agent-use-case-selection|Agent Use-Case Selection]]

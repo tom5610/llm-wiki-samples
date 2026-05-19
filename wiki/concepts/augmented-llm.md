@@ -3,7 +3,7 @@ title: The Augmented LLM
 type: concept
 source: "raw/Building Effective AI Agents.md"
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-19
 ---
 
 # The Augmented LLM
@@ -40,6 +40,7 @@ The augmented LLM is the atomic unit that composes into all [[agentic-systems|Ag
 
 - [[agentic-systems|Agentic Systems]]
 - [[agent-computer-interface|Agent-Computer Interface]]
+- [[tool-taxonomy|Tool Taxonomy]]
 - [[prompt-chaining|Prompt Chaining]]
 - [[routing|Routing]]
 - [[parallelization|Parallelization]]

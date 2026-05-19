@@ -3,7 +3,7 @@ title: Orchestrator-Workers
 type: technique
 source: "raw/Building Effective AI Agents.md"
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-05-19
 ---
 
 # Orchestrator-Workers
@@ -44,6 +44,12 @@ Use orchestrator-workers when:
 - Worker outputs may be inconsistent or contradictory, requiring robust synthesis logic
 - More expensive: orchestrator + N workers + synthesizer = at minimum N+2 LLM calls
 
+## Relationship to Multi-Agent Patterns
+
+This technique describes dynamic decomposition within a workflow. When the workers become full agents (with their own tools, instructions, and state), the pattern evolves into multi-agent orchestration:
+- The [[manager-pattern|Manager Pattern]] is closely related — it uses a central agent that delegates to specialized agents via tool calls. The distinction: orchestrator-workers emphasizes *dynamic task decomposition*, while the manager pattern emphasizes *pre-defined specialist selection*.
+- The [[decentralized-pattern|Decentralized Pattern]] takes a different approach entirely — peer agents hand off execution without centralized control.
+
 ## See also
 
 - [[agentic-systems|Agentic Systems]]
@@ -52,3 +58,5 @@ Use orchestrator-workers when:
 - [[evaluator-optimizer|Evaluator-Optimizer]]
 - [[prompt-chaining|Prompt Chaining]]
 - [[agent-computer-interface|Agent-Computer Interface]]
+- [[manager-pattern|Manager Pattern]]
+- [[decentralized-pattern|Decentralized Pattern]]
