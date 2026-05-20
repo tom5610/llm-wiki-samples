@@ -131,38 +131,4 @@ The `assets/` folder contains architecture diagrams for each pattern:
 
 ---
 
-## Prompt on Skill
-
-The tutorial content in this folder was generated using the following Claude Code prompt:
-
-```
-Act as a Agentic AI expert, your mission is to help beginner learn and practice
-'building effective AI agents". Execute the below tasks per sub-agent in parallel.
-When the agents reply with detailed summary and analysis, then brainstorm with me
-to create tutorial content in 'output' folder.
-
-**Tasks**:
-    * From 'wiki' folder, extract 'building effective agents' concepts, patterns,
-      techniques and insights, including architecture design practices, useful images,
-      decision-making framework on when & why.
-    * Read [claude-cookbooks-folder](https://github.com/anthropics/claude-cookbooks/tree/main/patterns/agents)
-      thoroughly and summarise the key insights on each notebook, python script and
-      markdown file.
-
-**Rules of creating tutorial content**
-    * Do NOT change existing code and may reuse python script(s), if possible
-    * Keep the tutorial folder structure flat
-    * Extend notebooks with concepts, patterns, techniques and insights, including
-      architecture design practices, useful images, decision-making framework on
-      when & why.
-    * When all code/notebook creation is done, create a `README.md` to mention the
-      purpose and summary for each with inter-connected links.
-
-Last, for any questions, please use `AskUserQuestion` tool to clarify with me.
-```
-
-**Output:** [output folder](./output)
-
----
-
 *This tutorial series was created by synthesizing Anthropic's "Building Effective Agents" research with runnable code from the Claude Cookbooks.*
